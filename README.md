@@ -66,7 +66,7 @@ The time series analysis of Great Britain’s electricity demand provided insigh
 - The visual overlay of actual vs. forecasted values also provides a quick way to gauge model performance. Since the plots closely follow each other, it means the model is capturing the underlying patterns in the data.
 
 
-![Model Results]([Model Results.jpg](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Model%20Results.jpg))
+![SARIMA and Prophet Model Results](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Model%20Results.jpg)
 
 1. **SARIMA Model**: 
     - The SARIMA model showcased strong prediction abilities, achieving an RMSE of 411.27, representing only 1% of the data range. This low error shows high accuracy in its forecasts.
