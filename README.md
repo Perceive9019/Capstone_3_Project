@@ -31,11 +31,11 @@ To understand the underlying patterns of electricity we had to consider both the
 - **_Data Cleaning_**: An initial exploration revealed no presence of missing values or potential outliers. Such inconsistencies if present could adversely impact the quality of our forecasts. As such, missing data points were still addressed, and anomalies were rectified, ensuring that subsequent analyses were grounded in consistent and reliable data.
 - **_Time Series Decomposition_**: A decomposition of the time series data was conducted to understand the underlying patterns. This revealed strong daily seasonal variations, affirming the existence of consistent seasonal patterns — a crucial observation for subsequent modeling.
 
-![Fig. 1: Shows the  Seasonal Decomposition for the Month of January](Seasonal Component for January 2021.jpg)
+![Fig. 1: Shows the  Seasonal Decomposition for the Month of January](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Seasonal%20Component%20for%20January%202021.jpg)
 
 - **Data Transformation and Stationarity**: To ensure the effectiveness of time series forecasting models, especially SARIMA, it's imperative that the data exhibits stationarity (i.e., statistical properties like mean, variance, and autocorrelation are constant over time). Using the Augmented Dickey-Fuller (ADFuller) and KPSS tests, we ascertained that our time series data was non-stationary. Consequently, we applied differencing to transform the data, rendering it stationary. This step was crucial for the efficient functioning of the SARIMA model.
 
-![Fig. 2: Shows the First Differencing of the ‘tsd’ column which we want to Forecast](First Difference of tsd.jpg)
+![Fig. 2: Shows the First Differencing of the ‘tsd’ column which we want to Forecast](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/First%20Difference%20of%20tsd.jpg)
 
 2. **SARIMA (Seasonal Autoregressive Integrated Moving Average)**:
 - **_Model Selection_**: After visualizing the seasonal decomposition plot of our time series for the month of January, it became evident that the data exhibited significant seasonality. Given this observation, the SARIMA model, which inherently accounts for seasonality, was chosen as the best fit for this time series data.
@@ -45,28 +45,28 @@ To understand the underlying patterns of electricity we had to consider both the
 3.  **Prophet Model**
 Holiday Integration: One of the standout features of the Prophet model is its ability to incorporate holiday effects. We utilized the is_holiday column from our dataset to specify which days were holidays. By integrating this feature, we aimed to provide the model with more context, allowing it to take into account potential spikes or drops in electricity demand during holidays.
 
-![Prophet Model Forecast Trend Component](Prophet Forecast trend component.jpg)
-![Prophet Model Forecast Daily component.jpg](Prophet Forecast Daily component.jpg)
-![Prophet Model Forecast Weekly component.jpg](Prophet Forecast Weekly component.jpg)
-![Prophet Model Forecast Yearly component.jpg](Prophet Forecast Yearly component.jpg)
+![Prophet Model Forecast Trend Component](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Prophet%20Forecast%20trend%20component.jpg)
+![Prophet Model Forecast Daily component](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Prophet%20Forecast%20Daily%20component.jpg)
+![Prophet Model Forecast Weekly component](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Prophet%20Forecast%20Weekly%20component.jpg)
+![Prophet Model Forecast Yearly component](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Prophet%20Forecast%20Yearly%20component.jpg)
 ## Model Results
 
 The time series analysis of Great Britain’s electricity demand provided insightful outcomes derived from using the SARIMA and Prophet models. Below is a thoughtful interpretation of the findings.
 
-![Fig 3: SARIMAX Short Term Forecast](SARIMAX Short-term Forecast.jpg)
+![Fig 3: SARIMAX Short Term Forecast](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/SARIMAX%20Short-term%20Forecast.jpg)
 
 - The forecasted data (in red ) stays close to the actual test data (in orange), especially in the early parts of the forecast (the beginning steps).
 - As we move further into the forecast (towards the end of the 48 data points), we may expect the forecast to potentially diverge more from the test data since predicting further into the future is generally more uncertain. However, it is difficult to see that visually.
 - Any discrepancies between the forecasted line and the actual test data line highlight areas where the model's predictions were off. We don't see that here.
 
-![Fig 4: Prophet Model Forecast vs Actual Values](Prophet Model Forecast vs Actual Values.jpg)
+![Fig 4: Prophet Model Forecast vs Actual Values](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Prophet%20Model%20Forecast%20vs%20Actual%20Values.jpg)
 
 - The plot of the Prophet forecast is in blue (with uncertainty intervals in light blue) and the actual values from the test set are in red.
 - This visual comparison gives a clear idea of how well the Prophet model has performed in predicting electricity demand in the test set's timeframe.
 - The visual overlay of actual vs. forecasted values also provides a quick way to gauge model performance. Since the plots closely follow each other, it means the model is capturing the underlying patterns in the data.
 
 
-![Model Results](Model Results.jpg)
+![Model Results]([Model Results.jpg](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Model%20Results.jpg))
 
 1. **SARIMA Model**: 
     - The SARIMA model showcased strong prediction abilities, achieving an RMSE of 411.27, representing only 1% of the data range. This low error shows high accuracy in its forecasts.
