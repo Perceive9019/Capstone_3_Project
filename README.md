@@ -33,7 +33,7 @@ To understand the underlying patterns of electricity we had to consider both the
 
 ![Fig. 1: Shows the  Seasonal Decomposition for the Month of January](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Seasonal%20Component%20for%20January%202021.jpg)
 
-- **Data Transformation and Stationarity**: To ensure the effectiveness of time series forecasting models, especially SARIMA, it's imperative that the data exhibits stationarity (i.e., statistical properties like mean, variance, and autocorrelation are constant over time). Using the Augmented Dickey-Fuller (ADFuller) and KPSS tests, we ascertained that our time series data was non-stationary. Consequently, we applied differencing to transform the data, rendering it stationary. This step was crucial for the efficient functioning of the SARIMA model.
+- **_Data Transformation and Stationarity_**: To ensure the effectiveness of time series forecasting models, especially SARIMA, it's imperative that the data exhibits stationarity (i.e., statistical properties like mean, variance, and autocorrelation are constant over time). Using the Augmented Dickey-Fuller (ADFuller) and KPSS tests, we ascertained that our time series data was non-stationary. Consequently, we applied differencing to transform the data, rendering it stationary. This step was crucial for the efficient functioning of the SARIMA model.
 
 ![Fig. 2: Shows the First Differencing of the ‘tsd’ column which we want to Forecast](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/First%20Difference%20of%20tsd.jpg)
 
