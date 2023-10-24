@@ -67,6 +67,10 @@ The time series analysis of Great Britain’s electricity demand provided insigh
 
 
 ![SARIMA and Prophet Model Results](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Model%20Results.jpg)
+|  Model  |        Evaluation Metric      |  Results  |
+|---------|-------------------------------|-----------|
+| SARIMA  | Root Mean Squared Error (RMSE)|  411.27  |
+| Prophet | Root Mean Squared Error (RMSE)| 10881.93 |
 
 1. **SARIMA Model**: 
     - The SARIMA model showcased strong prediction abilities, achieving an RMSE of 411.27, representing only 1% of the data range. This low error shows high accuracy in its forecasts.
