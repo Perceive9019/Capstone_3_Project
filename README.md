@@ -33,14 +33,14 @@ To understand the underlying patterns of electricity, we had to consider both th
 
 ![Fig. 1: Shows the  Seasonal Decomposition for the Month of January](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Seasonal%20Component%20for%20January%202021.jpg)
 
-- **_Data Transformation and Stationarity_**: To ensure the effectiveness of time series forecasting models, especially SARIMA, it's imperative that the data exhibits stationarity (i.e., statistical properties like mean, variance, and autocorrelation are constant over time). Using the Augmented Dickey-Fuller (ADFuller) and KPSS tests, we ascertained that our time series data was non-stationary. Consequently, we applied differencing to transform the data, rendering it stationary. This step was crucial for the efficient functioning of the SARIMA model.
+	- **_Data Transformation and Stationarity_**: To ensure the effectiveness of time series forecasting models, especially SARIMA, it's imperative that the data exhibits stationarity (i.e., statistical properties like mean, variance, and autocorrelation are constant over time). Using the Augmented Dickey-Fuller (ADFuller) and KPSS tests, we ascertained that our time series data was non-stationary. Consequently, we applied differencing to transform the data, rendering it stationary. This step was crucial for the efficient functioning of the SARIMA model.
 
 ![Fig. 2: Shows the First Differencing of the ‘tsd’ column which we want to Forecast](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/First%20Difference%20of%20tsd.jpg)
 
 2. **SARIMA (Seasonal Autoregressive Integrated Moving Average)**:
-- **_Model Selection_**: After visualizing the seasonal decomposition plot of our time series for the month of January, it became evident that the data exhibited significant seasonality. Given this observation, the SARIMA model, which inherently accounts for seasonality, was chosen as the best fit for this time series data.
-- **_Parameter Optimization_**: The auto_arima function from the pmdarima library was employed to streamline the process of hyperparameter tuning. This function iteratively tested different combinations of the SARIMA parameters to identify the set that minimized the Akaike Information Criterion (AIC), a measure of the goodness of fit of an estimated statistical model. By doing so, we were able to determine the optimal parameters (p, d, q, P, D, Q) for our SARIMA model.
-- **_Model Training and Forecasting_**: With the optimal parameters in hand, we partitioned our dataset into training (80%) and testing (20%) subsets. The SARIMA model was trained using the training data, following which forecasts were generated based on the test data. This split-sample validation method provided an empirical means to assess the out-of-sample forecasting capabilities of the SARIMA model.
+	- **_Model Selection_**: After visualizing the seasonal decomposition plot of our time series for the month of January, it became evident that the data exhibited significant seasonality. Given this observation, the SARIMA model, which inherently accounts for seasonality, was chosen as the best fit for this time series data.
+	- **_Parameter Optimization_**: The auto_arima function from the pmdarima library was employed to streamline the process of hyperparameter tuning. This function iteratively tested different combinations of the SARIMA parameters to identify the set that minimized the Akaike Information Criterion (AIC), a measure of the goodness of fit of an estimated statistical model. By doing so, we were able to determine the optimal parameters (p, d, q, P, D, Q) for our SARIMA model.
+	- **_Model Training and Forecasting_**: With the optimal parameters in hand, we partitioned our dataset into training (80%) and testing (20%) subsets. The SARIMA model was trained using the training data, following which forecasts were generated based on the test data. This split-sample validation method provided an empirical means to assess the out-of-sample forecasting capabilities of the SARIMA model.
 
 3.  **Prophet Model**
 Holiday Integration: One of the standout features of the Prophet model is its ability to incorporate holiday effects. We utilized the is_holiday column from our dataset to specify which days were holidays. By integrating this feature, we aimed to provide the model with more context, allowing it to take into account potential spikes or drops in electricity demand during holidays.
@@ -79,36 +79,36 @@ The time series analysis of Great Britain’s electricity demand provided insigh
 ## Limitations
 
 1. **SARIMA Model Assumptions**:
-- SARIMA assumes linearity and was limited to a subset of the data due to computational constraints. It might not fully capture the non-linear complexities of electricity demand.
+	- SARIMA assumes linearity and was limited to a subset of the data due to computational constraints. It might not fully capture the non-linear complexities of electricity demand.
 
 2. **Prophet Model Simplifications**:
-- The binary nature of holiday effects in the Prophet model oversimplifies their actual impact on electricity demand. It's important to consider other factors that affect demand during holidays.
+	- The binary nature of holiday effects in the Prophet model oversimplifies their actual impact on electricity demand. It's important to consider other factors that affect demand during holidays.
 
 3. **Long-term Predictions**:
-- Long-term predictions for electricity demand, influenced by societal and technological trends, were not explored in this analysis. Further research is needed to understand future demand scenarios.
+	- Long-term predictions for electricity demand, influenced by societal and technological trends, were not explored in this analysis. Further research is needed to understand future demand scenarios.
 ## Recommendations
 1. Integration of Multiple Models
-- While both SARIMA and Prophet demonstrated commendable forecasting capabilities, an ensemble approach like XGBoost—integrating forecasts from multiple models—could potentially enhance precision and account for diverse data characteristics.
+	- While both SARIMA and Prophet demonstrated commendable forecasting capabilities, an ensemble approach like XGBoost—integrating forecasts from multiple models—could potentially enhance precision and account for diverse data characteristics.
 
 2. Incorporating External Factors
-- To further refine forecasts, it is essential to incorporate external factors such as severe weather conditions or major events that influence electricity demand fluctuations.
+	- To further refine forecasts, it is essential to incorporate external factors such as severe weather conditions or major events that influence electricity demand fluctuations.
 
 3. Periodic Retraining
-- Models should be periodically retrained to remain attuned to the current state of the power system, accounting for any changes in demand patterns or system dynamics.
+	- Models should be periodically retrained to remain attuned to the current state of the power system, accounting for any changes in demand patterns or system dynamics.
 ## Conclusion
 Based on the time series analysis we conducted:
 
 1. **Strong Seasonality**:
-- The data exhibits strong daily, weekly, and yearly seasonality. This implies that electricity demand in Great Britain has consistent patterns that recur over time. For instance, there might be consistent spikes during certain times of the day, specific days of the week, or particular months of the year.
+	- The data exhibits strong daily, weekly, and yearly seasonality. This implies that electricity demand in Great Britain has consistent patterns that recur over time. For instance, there might be consistent spikes during certain times of the day, specific days of the week, or particular months of the year.
 
 2. **Effect of Holidays**:
-- By integrating holiday effects into the Prophet model, we observed that holidays influence electricity demand. This suggests that certain holidays or holiday periods may see a noticeable rise or fall in electricity demand.
+	- By integrating holiday effects into the Prophet model, we observed that holidays influence electricity demand. This suggests that certain holidays or holiday periods may see a noticeable rise or fall in electricity demand.
 
 3. **Model Predictions**:
-- The SARIMA model, even when trained on a subset of the data, demonstrated robust forecasting capabilities. This suggests that short-term forecasts, based on recent trends, can be quite reliable. The Prophet model, on the other hand, while competent, had a higher RMSE when compared to SARIMA.
+	- The SARIMA model, even when trained on a subset of the data, demonstrated robust forecasting capabilities. This suggests that short-term forecasts, based on recent trends, can be quite reliable. The Prophet model, on the other hand, while competent, had a higher RMSE when compared to SARIMA.
 
 4. **Model Predictions**:
-- The fact that we had to subset our data for the SARIMA model due to computational constraints means we primarily focused on more recent trends, which may or may not continue into the distant future.
+	- The fact that we had to subset our data for the SARIMA model due to computational constraints means we primarily focused on more recent trends, which may or may not continue into the distant future.
 
 **Considering the above points, we can infer that**:
 - Electricity demand in Great Britain will continue to exhibit daily, weekly, and yearly seasonal patterns.
