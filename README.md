@@ -111,8 +111,3 @@ Based on the time series analysis we conducted:
 - Electricity demand in Great Britain will continue to exhibit daily, weekly, and yearly seasonal patterns.
 - Certain holidays or holiday periods will likely see variations in demand, and understanding these can be crucial for effective demand management.
 - While our models provide a reliable forecast in the short-term, predicting further into the future is more uncertain, especially considering potential broader societal and technological shifts.
-
-| Header 1                      | Header 2                      |
-|-------------------------------|-------------------------------|
-| This is some long text that should wrap inside the cell when the cell's width isn't sufficient to display it in one line. | Another long piece of text that should also wrap inside its respective cell. |
-
