@@ -65,11 +65,11 @@ The time series analysis of Great Britain’s electricity demand provided insigh
 - This visual comparison gives a clear idea of how well the Prophet model has performed in predicting electricity demand in the test set's timeframe.
 - The visual overlay of actual vs. forecasted values also provides a quick way to gauge model performance. Since the plots closely follow each other, it means the model is capturing the underlying patterns in the data.
 
-
-                                                            |  Model  |        Evaluation Metric      |  Results |
-                                                            |---------|-------------------------------|----------|
-                                                            | SARIMA  | Root Mean Squared Error (RMSE)|  411.27  |
-                                                            | Prophet | Root Mean Squared Error (RMSE)| 10881.93 |
+	 |  Model  |        Evaluation Metric      |  Results |
+	 |---------|-------------------------------|----------|
+	 | SARIMA  | Root Mean Squared Error (RMSE)|  411.27  |
+	 | Prophet | Root Mean Squared Error (RMSE)| 10881.93 |
+                                                           
 
 1. **SARIMA Model**: 
     - The SARIMA model showcased strong prediction abilities, achieving an RMSE of 411.27, representing only 1% of the data range. This low error shows high accuracy in its forecasts.
