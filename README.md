@@ -66,7 +66,6 @@ The time series analysis of Great Britain’s electricity demand provided insigh
 - The visual overlay of actual vs. forecasted values also provides a quick way to gauge model performance. Since the plots closely follow each other, it means the model is capturing the underlying patterns in the data.
 
 
-![SARIMA and Prophet Model Results](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Model%20Results.jpg)
 |  Model  |        Evaluation Metric      |  Results  |
 |---------|-------------------------------|-----------|
 | SARIMA  | Root Mean Squared Error (RMSE)|  411.27  |
