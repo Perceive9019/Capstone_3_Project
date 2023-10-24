@@ -12,21 +12,21 @@ Electricity demand forecasting is pivotal to the efficient operation and plannin
 
 For Great Britain, a region with a rich history of industrialization and a progressive approach to renewable energy adoption, understanding electricity demand patterns is more critical than ever. The National Grid ESO has been diligently gathering electricity demand data since 2009, with readings taken every 30 minutes, amounting to 48 entries daily. This consistent and extensive data collection presents a unique opportunity to apply advanced forecasting methods to gain deeper insights into future demand.
 
-In this report, we employ two distinct forecasting methodologies: the Seasonal Autoregressive Integrated Moving Average (SARIMA) model and the Prophet model. Both have gained recognition for their capability to handle time series data effectively, but they each offer their nuances and advantages. By leveraging both models, we aim to provide a comprehensive analysis and forecast of Great Britain's electricity demand, comparing and contrasting the results obtained from each methodology.
+In this report, we employ two distinct forecasting methodologies: the Seasonal Autoregressive Integrated Moving Average (SARIMA) model and the Prophet model. Both have gained recognition for their capability to handle time series data effectively, but they each offer their own nuances and advantages. By leveraging both models, we aim to provide a comprehensive analysis and forecast of Great Britain's electricity demand, comparing and contrasting the results obtained from each methodology.
 
-The objective is not only to predict future short-term demands but to gauge the effectiveness of these models in the specific context of electricity demand forecasting for Great Britain. The insights derived will assist in better grid management, policy-making, and infrastructure planning.
+The objective is not only to predict future short-term demands but also to gauge the effectiveness of these models in the specific context of electricity demand forecasting for Great Britain. The insights derived will assist in better grid management, policy-making, and infrastructure planning.
 
 Through the sections of this report, we will delve into the methodology used, the limitations faced during the analysis, the results obtained, and the recommendations of these findings for the broader electricity landscape of Great Britain.
 ## Data
 
-We sourced the [National Grid ESO dataset](https://www.kaggle.com/datasets/albertovidalrod/electricity-consumption-uk-20092022/data) capturing electricity demand in Great Britain from 2009 onwards. This data is updated **twice and hour**, which means 48 entries per day. This makes this dataset ideal for time series forecasting.
+We sourced the [National Grid ESO dataset](https://www.kaggle.com/datasets/albertovidalrod/electricity-consumption-uk-20092022/data) capturing electricity demand in Great Britain from 2009 onwards. This data is updated **twice an hour**, which means 48 entries per day. This makes this dataset ideal for time series forecasting.
 
-![Time Series of Electricity Demand Over Time](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Time%20Series%20of%20Electricity%20Demand%20Over%20Time.jpg)
+[Time Series of Electricity Demand Over Time](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Time%20Series%20of%20Electricity%20Demand%20Over%20Time.jpg)
 ## Methodology
 
-To understand the underlying patterns of electricity we had to consider both the historical data and the inherent seasonality present in the time series data. Therefore, our methodology combined rigorous data processing and the applications of two well-established forecasting models.
+To understand the underlying patterns of electricity, we had to consider both the historical data and the inherent seasonality present in the time series data. Therefore, our methodology combined rigorous data processing and the applications of two well-established forecasting models.
 
-1. **Data Preprocessing**:
+1. Data Preprocessing:
 	- **_Data Acquisition_**: The dataset was sourced from the National Grid ESO, capturing electricity demand in Great Britain from 2009 onwards. With 48 half-hourly entries per day, this amounted to a detailed time series dataset.
 	- **_Data Cleaning_**: An initial exploration revealed no presence of missing values or potential outliers. Such inconsistencies if present could adversely impact the quality of our forecasts. As such, missing data points were still addressed, and anomalies were rectified, ensuring that subsequent analyses were grounded in consistent and reliable data.
 	- **_Time Series Decomposition_**: A decomposition of the time series data was conducted to understand the underlying patterns. This revealed strong daily seasonal variations, affirming the existence of consistent seasonal patterns — a crucial observation for subsequent modeling.
