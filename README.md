@@ -22,7 +22,7 @@ Through the sections of this report, we will delve into the methodology used, th
 We sourced the [National Grid ESO dataset](https://www.kaggle.com/datasets/albertovidalrod/electricity-consumption-uk-20092022/data) capturing electricity demand in Great Britain from 2009 onwards. This data is updated **twice and hour**, which means 48 entries per day. This makes this dataset ideal for time series forecasting.
 
 ![Time Series of Electricity Demand Over Time](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Time%20Series%20of%20Electricity%20Demand%20Over%20Time.jpg)
-## Methodoloy
+## Methodology
 
 To understand the underlying patterns of electricity we had to consider both the historical data and the inherent seasonality present in the time series data. Therefore, our methodology combined rigorous data processing and the applications of two well-established forecasting models.
 
