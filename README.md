@@ -27,9 +27,9 @@ We sourced the [National Grid ESO dataset](https://www.kaggle.com/datasets/alber
 To understand the underlying patterns of electricity we had to consider both the historical data and the inherent seasonality present in the time series data. Therefore, our methodology combined rigorous data processing and the applications of two well-established forecasting models.
 
 1. **Data Preprocessing**:
-- **_Data Acquisition_**: The dataset was sourced from the National Grid ESO, capturing electricity demand in Great Britain from 2009 onwards. With 48 half-hourly entries per day, this amounted to a detailed time series dataset.
-- **_Data Cleaning_**: An initial exploration revealed no presence of missing values or potential outliers. Such inconsistencies if present could adversely impact the quality of our forecasts. As such, missing data points were still addressed, and anomalies were rectified, ensuring that subsequent analyses were grounded in consistent and reliable data.
-- **_Time Series Decomposition_**: A decomposition of the time series data was conducted to understand the underlying patterns. This revealed strong daily seasonal variations, affirming the existence of consistent seasonal patterns — a crucial observation for subsequent modeling.
+	- **_Data Acquisition_**: The dataset was sourced from the National Grid ESO, capturing electricity demand in Great Britain from 2009 onwards. With 48 half-hourly entries per day, this amounted to a detailed time series dataset.
+	- **_Data Cleaning_**: An initial exploration revealed no presence of missing values or potential outliers. Such inconsistencies if present could adversely impact the quality of our forecasts. As such, missing data points were still addressed, and anomalies were rectified, ensuring that subsequent analyses were grounded in consistent and reliable data.
+	- **_Time Series Decomposition_**: A decomposition of the time series data was conducted to understand the underlying patterns. This revealed strong daily seasonal variations, affirming the existence of consistent seasonal patterns — a crucial observation for subsequent modeling.
 
 ![Fig. 1: Shows the  Seasonal Decomposition for the Month of January](https://github.com/Perceive9019/Capstone_3_Project/blob/main/4.%20_README_files/Seasonal%20Component%20for%20January%202021.jpg)
 
